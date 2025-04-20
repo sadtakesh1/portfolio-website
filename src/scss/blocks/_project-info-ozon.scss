@@ -1,0 +1,233 @@
+.project-info-ozon {
+  &__video {
+    margin-bottom: 60px;
+  }
+  &__case {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-width: 1080px;
+    margin: 0 0 60px 0;
+    position: relative;
+
+    &-image {
+      max-width: 540px;
+      min-height: 630px;
+      &-absolute {
+        position: absolute;
+        bottom: 20px;
+        left: 180px;
+
+        &-second {
+          position: absolute;
+          bottom: 100px;
+          left: 150px;
+        }
+      }
+    }
+  }
+  &__image {
+    max-width: 1080px;
+    max-height: 600px;
+    margin-bottom: 60px;
+    min-width: 1080px;
+    // min-height: 600px;
+    object-fit: cover;
+
+    &-last {
+      max-width: 1080px;
+      max-height: 600px;
+      margin: 0 0 60px 0;
+      min-width: 1080px;
+      // min-height: 600px;
+      object-fit: cover;
+    }
+
+    &-overlap {
+      margin-top: -30px;
+      margin-left: -70px;
+      margin-bottom: 60px;
+
+      &-second {
+        margin-top: -30px;
+        margin-bottom: 60px;
+      }
+    }
+
+    &-textures {
+      max-width: 1080px;
+      max-height: 156px;
+      margin-bottom: 60px;
+      min-width: 1080px;
+      object-fit: cover;
+    }
+  }
+
+  &__container {
+    margin: 60px 0 30px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-family: "Cakra", sans-serif;
+    font-size: 26px;
+    font-weight: 500;
+  }
+
+  &__tags {
+    font-family: "Intel-light", sans-serif;
+    font-style: italic;
+    font-size: 18px;
+  }
+  &__block {
+    max-width: 463px;
+  }
+
+  &__objectives {
+    max-width: 400px;
+    font-family: "Intel-light", sans-serif;
+    font-size: 16px;
+  }
+
+  &__solution {
+    margin-top: 10px;
+  }
+
+  &__task {
+    &-title {
+      position: relative;
+      display: inline-block;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -2px; /* Смещение вниз */
+        height: 40%; /* Высота выделения */
+        background: rgba(0, 0, 0, 0.1); /* Полупрозрачный серый */
+        z-index: 1;
+      }
+    }
+  }
+
+  &__solution {
+    &-title {
+      position: relative;
+      display: inline-block;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -2px; /* Смещение вниз */
+        height: 40%; /* Высота выделения */
+        background: rgba(0, 0, 0, 0.1); /* Полупрозрачный серый */
+        z-index: 1;
+      }
+    }
+  }
+
+  &__description {
+    margin-bottom: 60px;
+    max-width: 463px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-family: "Intel-light", sans-serif;
+    font-size: 18px;
+
+    &-case {
+      max-width: 463px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      font-family: "Intel-light", sans-serif;
+      font-size: 16px;
+
+      &-second {
+        max-width: 496px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        font-family: "Intel-light", sans-serif;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .project-info-ozon__case {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    min-width: unset;
+  }
+
+  .project-info-ozon__case-image {
+    max-width: 100%;
+    min-height: auto;
+  }
+
+  .project-info-ozon__case-image-absolute,
+  .project-info-ozon__case-image-absolute-second {
+    display: none;
+  }
+
+  .project-info-ozon__image,
+  .project-info-ozon__image-last,
+  .project-info-ozon__image-textures {
+    max-width: 100%;
+    min-width: unset;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto 40px;
+  }
+
+  .project-info-ozon__image-overlap,
+  .project-info-ozon__image-overlap-second {
+    margin: 30px auto 40px auto;
+  }
+
+  .project-info-ozon__container {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  .project-info-ozon__block,
+  .project-info-ozon__objectives {
+    max-width: 100%;
+  }
+
+  .project-info-ozon__title {
+    font-size: 22px;
+  }
+
+  .project-info-ozon__tags {
+    font-size: 16px;
+  }
+
+  .project-info-ozon__description,
+  .project-info-ozon__description-case,
+  .project-info-ozon__description-case-second {
+    max-width: 100%;
+    font-size: 16px;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-info-ozon__title {
+    font-size: 20px;
+  }
+
+  .project-info-ozon__tags,
+  .project-info-ozon__objectives,
+  .project-info-ozon__description,
+  .project-info-ozon__description-case,
+  .project-info-ozon__description-case-second {
+    font-size: 14px;
+  }
+}

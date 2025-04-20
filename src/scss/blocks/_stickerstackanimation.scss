@@ -1,0 +1,46 @@
+.sticker-stack-animation {
+  position: relative;
+  width: 280px;
+  height: 350px;
+  margin: 100px auto;
+  perspective: 1000px; // Для 3D-эффекта (если понадобится)
+}
+
+.sticker-card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+  will-change: transform, opacity;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    pointer-events: none;
+    user-select: none;
+  }
+}
+
+/* Ключевые кадры для эффекта отклеивания «стикера» */
+@keyframes stickerPeel {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    /* Эффект: карточка отклеивается от верхнего левого угла, немного поворачивается, смещается вниз и уменьшается */
+    transform: translateY(150px) rotate(20deg) scale(0.9);
+    opacity: 0;
+  }
+}
+
+/* Применяем анимацию к верхней карточке */
+.sticker-card.animate {
+  transform-origin: top left;
+  animation: stickerPeel 0.8s ease-in-out forwards;
+}

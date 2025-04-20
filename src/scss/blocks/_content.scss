@@ -1,0 +1,19 @@
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  max-width: 1080px;
+  margin: 0 auto;
+
+  &--alt {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1024px) {
+  .content {
+    flex-direction: column;
+    padding: 0 20px;
+    // align-items: center;
+  }
+}

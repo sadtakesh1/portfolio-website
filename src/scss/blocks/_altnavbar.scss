@@ -1,0 +1,159 @@
+// .alt-nav {
+//   min-width: 1020px;
+//   font-family: "Cakra", sans-serif;
+//   &__list {
+//     display: flex;
+//     flex-direction: row;
+//     max-width: 400px;
+//     align-items: flex-start;
+//     margin: 100px 0 0 0;
+//     position: sticky;
+//     float: right;
+//     top: 100px;
+//     gap: 30px;
+
+//     &-button {
+//       font-family: "Cakra", sans-serif;
+//       color: #d1d1d1;
+//       font-size: 26px;
+//       background: none;
+//       border: none;
+//       outline: none;
+//       padding: 0; // Убирает внутренние отступы (если нужно)
+//       margin: 0; // Убирает внешние отступы (если нужно)
+//       cursor: pointer;
+//       &:hover {
+//         color: black;
+//       }
+//     }
+//   }
+// }
+
+.alt-nav {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 100px;
+  gap: 632px;
+
+  &__anim {
+    position: sticky;
+    top: 100px;
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    opacity: 0;
+    transform: scale(0.95) translateY(5px);
+    transition: opacity 0.4s ease, transform 0.4s ease,
+      background-image 0.3s ease-in-out;
+
+    // Появление и смена gif в зависимости от hover на кнопках
+    &:has(+ .alt-nav__list .alt-nav__list-button-projects:hover) {
+      background-image: url("../assets/images/projects.gif");
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+
+    &:has(+ .alt-nav__list .alt-nav__list-button-about:hover) {
+      background-image: url("../assets/images/about.gif");
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+
+    &:has(+ .alt-nav__list .alt-nav__list-button-contacts:hover) {
+      background-image: url("../assets/images/contacts.gif");
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    position: sticky;
+    top: 100px;
+    gap: 30px;
+
+    &-button {
+      font-family: "Cakra", sans-serif;
+      color: #d1d1d1;
+      font-size: 26px;
+      background: none;
+      border: none;
+      outline: none;
+      padding: 0;
+      margin: 0;
+      cursor: pointer;
+
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: black;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .alt-nav {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 5px;
+
+    &__anim {
+      display: none; // ❌ Скрываем гиф-анимации для упрощения интерфейса
+    }
+
+    &__list {
+      position: static;
+      flex-direction: row;
+      gap: 5px;
+
+      &-button {
+        font-size: 18px;
+        color: black; // можно сделать активными сразу
+        text-align: center;
+
+        &:hover {
+          color: #777;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .alt-nav {
+    flex-direction: row;
+    // justify-content: space-between;
+    align-items: center;
+    margin-top: 60px;
+    gap: 40px;
+
+    &__anim {
+      display: none;
+    }
+
+    &__list {
+      position: static;
+      flex-direction: row;
+      gap: 20px;
+
+      &-button {
+        font-size: 20px;
+        color: #111;
+
+        &:hover {
+          color: #555;
+        }
+      }
+    }
+  }
+}

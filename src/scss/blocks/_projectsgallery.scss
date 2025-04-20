@@ -1,0 +1,26 @@
+.projects-gallery {
+  &__link {
+    all: unset;
+    cursor: pointer;
+  }
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 50px;
+  margin: 100px 0 0 100px;
+}
+
+@media (max-width: 1024px) {
+  .projects-gallery {
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .projects-gallery {
+    grid-template-columns: 1fr;
+    margin: 0;
+    gap: 20px;
+  }
+}
