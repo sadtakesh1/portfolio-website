@@ -1,6 +1,6 @@
 .project-card {
-  width: 500px;
-  height: 600px;
+  max-width: 530px;
+
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -14,8 +14,9 @@
 
   &__image {
     width: 100%;
-    height: 80%; // Подгоняем под 600px
+    // height: 60%; // Подгоняем под 600px
     object-fit: cover; // Чтобы гифка не искажалась
+    aspect-ratio: 1 / 1;
   }
 
   &__title {
@@ -34,40 +35,46 @@
 
 @media (max-width: 1024px) {
   .project-card {
-    width: 100%;
-    height: auto;
+    // width: 100%;
+    // height: auto;
+    // width: 100%;
+    // height: 100%;
 
     &__image {
-      height: auto;
-      max-height: 400px;
+      // height: auto;
+      // max-height: 400px;
+      // width: 100%;
+      // height: 100%;
     }
 
     &__title {
-      font-size: 20px;
+      font-size: 32px;
       margin-top: 20px;
     }
 
     &__description {
-      font-size: 14px;
+      font-size: 20px;
     }
   }
 }
 
 @media (max-width: 767px) {
   .project-card {
-    padding: 10px;
     box-sizing: border-box;
+    // width: 100%;
+    // height: 100%;
 
     &__image {
-      max-height: 250px;
+      // width: 100%;
+      // height: 100%;
     }
 
     &__title {
-      font-size: 18px;
+      font-size: 20px;
     }
 
     &__description {
-      font-size: 13px;
+      font-size: 14px;
     }
   }
 }

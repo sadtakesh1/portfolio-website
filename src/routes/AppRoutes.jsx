@@ -9,6 +9,7 @@ import Ozon from "../pages/Ozon";
 import Yasno from "../pages/Yasno";
 import Yo from "../pages/Yo";
 import Lenta from "../pages/Lenta";
+import Muithom from "../pages/Muithom"
 
 const AppRoutes = () => {
   return (
@@ -24,6 +25,7 @@ const AppRoutes = () => {
       <Route path="projects/Yasno" element={<Yasno />} />
       <Route path="projects/Yo" element={<Yo />} />
       <Route path="projects/Lenta" element={<Lenta />} />
+      <Route path="projects/Muithom" element={<Muithom />} />
     </Routes>
   );
 };

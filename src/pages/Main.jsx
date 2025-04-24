@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, useLocation } from "react-router-dom";
+
 import NavBar from "../components/NavBar";
 import AppRoutes from "../routes/AppRoutes";
 import AltNavBar from "../components/AltNavBar";
@@ -6,6 +7,7 @@ import AltNavBar from "../components/AltNavBar";
 function Main() {
   return (
     <Router>
+
       <MainContent />
     </Router>
   );

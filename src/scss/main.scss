@@ -40,6 +40,20 @@ ul a:active {
   font-style: normal;
 }
 
+@font-face {
+  font-family: "AvantGardeGothicC";
+  src: url("../assets/fonts/AvantGardeGothicC.otf") format("otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy-Bold";
+  src: url("../assets/fonts/Gilroy-Bold.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
 @import "./blocks/page.scss";
 @import "./blocks/content.scss";
 @import "./blocks/navbar.scss";
@@ -56,3 +70,4 @@ ul a:active {
 @import "./blocks/autoscrollcarousel.scss";
 @import "./blocks/stickerstackanimation.scss";
 @import "./blocks/autocyclecards.scss";
+@import "./blocks/project-info-muithom.scss";

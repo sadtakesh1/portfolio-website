@@ -2,11 +2,11 @@ import mainGif from "../assets/images/lenta/main-gif.gif";
 
 import lentaVideos from "../assets/lentaVideos";
 import { AutoScrollCarousel } from "./AutoScrollCarousel";
-import { StickerStackAnimation } from "../components/StickerStackAnimation";
 import AutoCycleCards from "../components/AutoCycleCards";
 import circleImage from "../assets/images/lenta/circle.svg";
 import groupCirclesImage from "../assets/images/lenta/group-of-circles.svg";
 import petalsImage from "../assets/images/lenta/petals.svg";
+import lentaStories from "../assets/lentaStories";
 function Lenta() {
   return (
     <div className="project-info-lenta">
@@ -43,12 +43,23 @@ function Lenta() {
       </div>
 
       {/**Блок с каруселью */}
-      <AutoScrollCarousel />
-      {/* <StickerStackAnimation /> */}
+      <AutoScrollCarousel items={lentaStories} />
       <AutoCycleCards />
-      <img className="project-info-lenta__image-absolute-first" src={circleImage} alt="1" />
-      <img className="project-info-lenta__image-absolute-second" src={groupCirclesImage} alt="2" />
-      <img className="project-info-lenta__image-absolute-third" src={petalsImage} alt="3" />
+      <img
+        className="project-info-lenta__image-absolute-first"
+        src={circleImage}
+        alt="1"
+      />
+      <img
+        className="project-info-lenta__image-absolute-second"
+        src={groupCirclesImage}
+        alt="2"
+      />
+      <img
+        className="project-info-lenta__image-absolute-third"
+        src={petalsImage}
+        alt="3"
+      />
     </div>
   );
 }

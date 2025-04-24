@@ -3,16 +3,19 @@
     all: unset;
     cursor: pointer;
   }
+  max-width: 530px;
+  // max-height: 530px;
   display: grid;
   grid-template-columns: 1fr;
   gap: 50px;
-  margin: 100px 0 0 100px;
+  margin: 100px 0 100px 100px;
 }
 
 @media (max-width: 1024px) {
   .projects-gallery {
-    margin: 0 auto;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin: 0 auto 40px auto;
+    // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: 1fr;
     gap: 30px;
   }
 }
@@ -20,7 +23,7 @@
 @media (max-width: 767px) {
   .projects-gallery {
     grid-template-columns: 1fr;
-    margin: 0;
+    margin: 0 auto 40px auto;
     gap: 20px;
   }
 }
