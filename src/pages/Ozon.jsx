@@ -1,7 +1,8 @@
-import YouTubePlayer from "../components/YouTubePlayer";
+
 import firstImage from "../assets/images/ozon/1.png";
 import secondImage from "../assets/images/ozon/2.png";
 import thirdImage from "../assets/images/ozon/3.png";
+import gifAnimation from "../assets/images/ozon/ozon-animation.gif";
 function Ozon() {
   return (
     <div className="project-info-ozon">
@@ -31,11 +32,13 @@ function Ozon() {
       </div>
       <img className="project-info-ozon__image" src={firstImage} alt="1" />
       <img className="project-info-ozon__image" src={secondImage} alt="2" />
-      <img className="project-info-ozon__image-last" src={thirdImage} alt="3" />
-      <YouTubePlayer
-        className="project-info-ozon__video"
-        videoUrl="https://youtu.be/Y49872BChSE?si=2dtBX3aHUEU5WVNR"
+      <img
+        className="project-info-ozon__image"
+        src={gifAnimation}
+        alt="gif-animation"
       />
+
+      <img className="project-info-ozon__image-last" src={thirdImage} alt="3" />
     </div>
   );
 }
