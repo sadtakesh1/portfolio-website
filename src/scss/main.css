@@ -644,7 +644,7 @@ ul a:active {
     display: none;
   }
   .about__education {
-    font-size: 16px;
+    font-size: 14px;
     padding-left: 0;
     margin-top: 20px;
     font-family: "AvantGardeGothicC", sans-serif;
@@ -653,7 +653,7 @@ ul a:active {
     display: none;
   }
   .about__education-highlight {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
   }
   .about__experience {
@@ -662,7 +662,7 @@ ul a:active {
     text-align: center;
   }
   .about__experience-container {
-    margin-top: -41px;
+    margin-top: -40px;
   }
   .about__experience-group {
     display: flex;
