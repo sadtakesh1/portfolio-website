@@ -9,7 +9,6 @@ const ProjectsGallery = () => {
       {projectsData.map((project) => (
         <Link className="projects-gallery__link" key={project.id} to={project.link}>
           <ProjectCard
-            key={project.id}
             gif={project.gif}
             title={project.title}
             description={project.description}
@@ -21,3 +20,4 @@ const ProjectsGallery = () => {
 };
 
 export default ProjectsGallery;
+

@@ -24,7 +24,7 @@
   &__dot {
     position: absolute;
     left: 0;
-    top: 347px;
+    top: 346px;
     width: 15px;
     height: 15px;
     background: black;
@@ -34,19 +34,19 @@
     animation: dotAppear 1s 1s ease-out forwards;
 
     &:nth-child(2) {
-      top: 473px;
+      top: 488px;
       animation-delay: 1s;
     }
     &:nth-child(3) {
-      top: 578px;
+      top: 590px;
       animation-delay: 1s;
     }
     &:nth-child(4) {
-      top: 705px;
+      top: 713px;
       animation-delay: 1s;
     }
     &:nth-child(5) {
-      top: 850px;
+      top: 854px;
       animation-delay: 1s;
     }
   }
@@ -74,14 +74,14 @@
       transform: translate(-50%, -50%) scale(1);
     }
   }
-  margin: 100px 0 0 50px;
+  margin: 100px auto;
   max-width: 620px;
   font-family: "Intel-light", sans-serif;
   min-height: 1280px;
 
   &__skills {
     margin: 60px 0 0 0;
-    min-width: 620px;
+    min-width: 335px;
     font-size: 27px;
     font-weight: 100;
     display: flex;
@@ -166,6 +166,7 @@
     transform: translateY(50px); // Начальное положение (снизу)
     animation: textAppear 1s ease-out forwards;
     animation-delay: 0.5s; // Задержка перед стартом
+    font-family: "AvantGardeGothicC", sans-serif;
 
     &-group {
       display: flex;
@@ -176,15 +177,16 @@
     &-period {
       min-width: 110px;
       // min-height: 30px;
-      &-item {
-        // text-align: start;
-      }
+      // &-item {
+      //   // text-align: start;
+      // }
     }
     &-item {
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
       margin-bottom: 15px;
+
       // align-items: flex-end;
 
       &:last-child {
@@ -301,7 +303,7 @@
 }
 @media (max-width: 767px) {
   .about {
-    margin: 30px 15px;
+    margin: 30px auto;
     padding: 0;
     max-width: 100%;
     display: flex;
@@ -309,6 +311,7 @@
     align-items: center;
     text-align: center;
     min-height: auto;
+    overflow-x: hidden;
 
     // ❌ Убираем визуальные элементы
     &__line,
@@ -322,14 +325,14 @@
       align-items: center;
 
       &-title {
-        font-size: 22px;
+        font-size: 28px;
         font-weight: 800;
         text-transform: uppercase;
         line-height: 1.3;
       }
 
       &-text {
-        font-size: 14px;
+        font-size: 16px;
         margin-top: 10px;
         font-weight: 400;
       }
@@ -337,10 +340,11 @@
 
     // 🛠 Навыки
     &__skills {
-      font-size: 13px;
+      font-size: 17px;
       gap: 10px;
       margin-top: 25px;
       flex-direction: column;
+      font-family: "AvantGardeGothicC", sans-serif;
 
       &::before {
         display: none; // 🌟 Убираем gif
@@ -349,19 +353,20 @@
 
     // 🎓 Образование
     &__education {
-      font-size: 14px;
+      font-size: 16px;
       padding-left: 0;
       margin-top: 20px;
+      font-family: "AvantGardeGothicC", sans-serif;
 
       &::before {
         display: none;
       }
 
       &-highlight {
-        font-size: 15px;
+        font-size: 20px;
         font-weight: 700;
-        display: block;
-        margin-top: 10px;
+        // display: block;
+        // margin-top: 10px;
       }
     }
 
@@ -369,8 +374,11 @@
     &__experience {
       width: 100%;
       margin-top: 30px;
-      text-align: left;
+      text-align: center;
 
+      &-container {
+        margin-top: -41px;
+      }
       &-group {
         display: flex;
         flex-direction: column;
@@ -385,20 +393,38 @@
       &-period {
         font-size: 12px;
         margin-bottom: 5px;
+        display: flex;
+        justify-content: space-between; // ← это растянет даты по краям
+        // width: 100%;
+        position: relative;
+
+        &-item {
+          flex: 0 0 auto;
+        }
+
+        &-item:first-child {
+          text-align: left;
+        }
+        &-item:second-child {
+          text-align: right;
+        }
       }
 
       &-company {
         font-size: 14px;
         font-weight: 700;
-
-        &::after {
-          display: none;
-        }
+        text-align: center;
+        // border-bottom: solid 1px;
+        //добавление анимации линии ниже
       }
 
-      &-description,
+      &-description {
+        min-width: 335px;
+        font-size: 14px;
+        margin-top: 2px;
+      }
       &-position {
-        font-size: 13px;
+        font-size: 14px;
         margin-top: 2px;
       }
     }
@@ -419,8 +445,14 @@
       gap: 10px;
       margin-top: 30px;
 
+      &-image {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+      }
       &-text {
         font-size: 14px;
+        font-family: "AvantGardeGothicC", sans-serif;
       }
     }
 
@@ -431,7 +463,7 @@
       font-size: 16px;
 
       &-link {
-        font-size: 14px;
+        font-size: 30px;
       }
     }
 
@@ -445,123 +477,3 @@
     }
   }
 }
-// @media (max-width: 767px) {
-//   .about {
-//     margin: 20px 15px;
-//     padding: 0;
-//     max-width: 100%;
-//     min-height: auto;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     text-align: center;
-
-//     &__container {
-//       margin-left: 0;
-//       align-items: center;
-
-//       &-title {
-//         font-size: 28px;
-//         text-align: center;
-//         line-height: 1.2;
-//       }
-
-//       &-text {
-//         font-size: 16px;
-//         margin-top: 10px;
-//       }
-//     }
-
-//     &__skills,
-//     &__education,
-//     &__contacts {
-//       font-size: 16px;
-//       min-width: 100%;
-//       margin: 20px 0 0 0;
-//       padding-left: 0;
-//       align-items: center;
-
-//       &::before {
-//         width: 40px;
-//         height: 40px;
-//         margin: 0 auto 10px auto;
-//         position: static;
-//       }
-
-//       &-highlight {
-//         font-size: 18px;
-//       }
-
-//       &-link {
-//         font-size: 14px;
-//       }
-//     }
-
-//     &__experience {
-//       text-align: left;
-//       width: 100%;
-//       margin-top: 20px;
-
-//       &-group {
-//         flex-direction: column;
-//         align-items: flex-start;
-//       }
-
-//       &-company {
-//         font-size: 16px;
-//         text-align: left;
-//       }
-
-//       &-period {
-//         font-size: 14px;
-//       }
-
-//       &-position,
-//       &-description {
-//         font-size: 14px;
-//         text-align: left;
-//       }
-
-//       &-item {
-//         margin-bottom: 20px;
-//       }
-//     }
-
-//     &__description {
-//       flex-direction: column;
-//       align-items: center;
-//       gap: 15px;
-//       margin-top: 30px;
-
-//       &-text {
-//         font-size: 14px;
-//         text-align: center;
-//       }
-//     }
-
-//     &__dot {
-//       width: 8px;
-//       height: 8px;
-//       top: auto !important;
-//       position: relative;
-//       margin: 15px auto;
-//     }
-
-//     &__line {
-//       display: none;
-//     }
-
-//     &__contacts {
-//       margin-top: 30px;
-//       margin-bottom: 50px;
-//       font-size: 20px;
-//     }
-
-//     .about__footer {
-//       font-size: 16px;
-//       margin-top: 40px;
-//       font-weight: bold;
-//       text-transform: uppercase;
-//     }
-//   }
-// }

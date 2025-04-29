@@ -433,6 +433,7 @@
     margin: 60px 0 30px 0;
     display: flex;
     justify-content: space-between;
+    
 
     &-logo {
       max-width: 1080px;
@@ -451,9 +452,9 @@
   }
 
   &__tags {
-    font-family: "Intel-light", sans-serif;
+    font-family: 'AvantGardeGothicC', sans-serif;
     font-style: italic;
-    font-size: 18px;
+    font-size: 16px;
   }
 
   &__block {
@@ -462,8 +463,9 @@
 
   &__objectives {
     max-width: 400px;
-    font-family: "Intel-light", sans-serif;
+    font-family: "AvantGardeGothicC", sans-serif;
     font-size: 16px;
+    padding-left: 4px;
   }
 
   &__solution {
@@ -514,9 +516,14 @@
     font-size: 18px;
 
     &-text {
+      font-family: "AvantGardeGothicC", sans-serif;
+      font-size: 16px;
       &-bold {
+        font-family: "Gilroy-Bold", sans-serif;
+        letter-spacing: 1.5px;
+        line-height: 1;
         font-weight: bold;
-        font-size: 35px;
+        font-size: 33px;
         margin-top: 35px;
       }
     }
@@ -526,7 +533,7 @@
       display: flex;
       flex-direction: column;
       gap: 15px;
-      font-family: "Intel-light", sans-serif;
+
       font-size: 16px;
       justify-content: end;
 
@@ -535,7 +542,7 @@
         display: flex;
         flex-direction: column;
         gap: 15px;
-        font-family: "Intel-light", sans-serif;
+
         font-size: 16px;
       }
     }
@@ -633,14 +640,17 @@
   .project-info-muithom__block,
   .project-info-muithom__objectives {
     max-width: 100%;
+    padding-left: 0;
   }
 
   .project-info-muithom__title {
     font-size: 22px;
+    text-align: center;
   }
 
   .project-info-muithom__tags {
     font-size: 16px;
+    text-align: center;
   }
 
   .project-info-muithom__description,
@@ -669,7 +679,7 @@
 
 @media (max-width: 768px) {
   .project-info-muithom__title {
-    font-size: 20px;
+    font-size: 22px;
   }
 
   .project-info-muithom__tags,
@@ -677,6 +687,6 @@
   .project-info-muithom__description-case,
   .project-info-muithom__description-case-second,
   .project-info-muithom__objectives {
-    font-size: 14px;
+    font-size: 16px;
   }
 }

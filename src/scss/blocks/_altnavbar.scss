@@ -1,34 +1,3 @@
-// .alt-nav {
-//   min-width: 1020px;
-//   font-family: "Cakra", sans-serif;
-//   &__list {
-//     display: flex;
-//     flex-direction: row;
-//     max-width: 400px;
-//     align-items: flex-start;
-//     margin: 100px 0 0 0;
-//     position: sticky;
-//     float: right;
-//     top: 100px;
-//     gap: 30px;
-
-//     &-button {
-//       font-family: "Cakra", sans-serif;
-//       color: #d1d1d1;
-//       font-size: 26px;
-//       background: none;
-//       border: none;
-//       outline: none;
-//       padding: 0; // Убирает внутренние отступы (если нужно)
-//       margin: 0; // Убирает внешние отступы (если нужно)
-//       cursor: pointer;
-//       &:hover {
-//         color: black;
-//       }
-//     }
-//   }
-// }
-
 .alt-nav {
   display: flex;
   justify-content: flex-end;
@@ -48,26 +17,87 @@
 
     opacity: 0;
     transform: scale(0.95) translateY(5px);
-    transition: opacity 0.4s ease, transform 0.4s ease,
-      background-image 0.3s ease-in-out;
+    transition: opacity 0.2s ease, transform 0.2s ease,
+      background-image 0.2s ease-in-out;
 
     // Появление и смена gif в зависимости от hover на кнопках
-    &:has(+ .alt-nav__list .alt-nav__list-button-projects:hover) {
+    // &:has(+ .alt-nav__list .alt-nav__list-button-projects:hover) {
+    //   background-image: url("../assets/images/projects.gif");
+    //   opacity: 1;
+    //   transform: scale(1) translateY(0);
+    // }
+
+    // &:has(+ .alt-nav__list .alt-nav__list-button-about:hover) {
+    //   background-image: url("../assets/images/about.gif");
+    //   opacity: 1;
+    //   transform: scale(1) translateY(0);
+    // }
+
+    // &:has(+ .alt-nav__list .alt-nav__list-button-contacts:hover) {
+    //   background-image: url("../assets/images/contacts.gif");
+    //   opacity: 1;
+    //   transform: scale(1) translateY(0);
+    // }
+    // Когда hover на кнопке
+    &:has(+ .alt-nav__list .alt-nav__list-button-projects:hover),
+    &:has(+ .alt-nav__list .alt-nav__list-button-projects.active) {
       background-image: url("../assets/images/projects.gif");
       opacity: 1;
       transform: scale(1) translateY(0);
     }
 
-    &:has(+ .alt-nav__list .alt-nav__list-button-about:hover) {
+    &:has(+ .alt-nav__list .alt-nav__list-button-about:hover),
+    &:has(+ .alt-nav__list .alt-nav__list-button-about.active) {
       background-image: url("../assets/images/about.gif");
       opacity: 1;
       transform: scale(1) translateY(0);
     }
 
-    &:has(+ .alt-nav__list .alt-nav__list-button-contacts:hover) {
+    &:has(+ .alt-nav__list .alt-nav__list-button-contacts:hover),
+    &:has(+ .alt-nav__list .alt-nav__list-button-contacts.active) {
       background-image: url("../assets/images/contacts.gif");
       opacity: 1;
       transform: scale(1) translateY(0);
+    }
+  }
+
+  &--blue {
+    //old version of the gifs animation
+    // & .alt-nav__anim {
+    //   &:has(+ .alt-nav__list .alt-nav__list-button-projects:hover) {
+    //     background-image: url("../assets/images/projects-lenta.gif");
+    //   }
+
+    //   &:has(+ .alt-nav__list .alt-nav__list-button-about:hover) {
+    //     background-image: url("../assets/images/about-lenta.gif");
+    //   }
+
+    //   &:has(+ .alt-nav__list .alt-nav__list-button-contacts:hover) {
+    //     background-image: url("../assets/images/contacts-lenta.gif");
+    //   }
+    // }
+
+    & .alt-nav__anim {
+      &:has(+ .alt-nav__list .alt-nav__list-button-projects:hover),
+      &:has(+ .alt-nav__list .alt-nav__list-button-projects.active) {
+        background-image: url("../assets/images/projects-lenta.gif");
+        opacity: 1;
+        transform: scale(1) translateY(0);
+      }
+
+      &:has(+ .alt-nav__list .alt-nav__list-button-about:hover),
+      &:has(+ .alt-nav__list .alt-nav__list-button-about.active) {
+        background-image: url("../assets/images/about-lenta.gif");
+        opacity: 1;
+        transform: scale(1) translateY(0);
+      }
+
+      &:has(+ .alt-nav__list .alt-nav__list-button-contacts:hover),
+      &:has(+ .alt-nav__list .alt-nav__list-button-contacts.active) {
+        background-image: url("../assets/images/contacts-lenta.gif");
+        opacity: 1;
+        transform: scale(1) translateY(0);
+      }
     }
   }
 
@@ -92,7 +122,8 @@
 
       transition: color 0.3s ease;
 
-      &:hover {
+      &:hover,
+      &.active {
         color: black;
       }
     }

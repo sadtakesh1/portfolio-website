@@ -6,33 +6,33 @@ import fifthImage from "../assets/images/fdi/5.gif";
 import sixthImage from "../assets/images/fdi/6.png";
 import seventhImage from "../assets/images/fdi/7.jpg";
 import eighthImage from "../assets/images/fdi/8.gif";
-import ninthImage from "../assets/images/fdi/9.png";
+import ninthImage from "../assets/images/fdi/factory-nine.png";
 import tenthImage from "../assets/images/fdi/10.png";
 import eleventhImage from "../assets/images/fdi/11.png";
 
 function ToysFactory() {
   return (
     <div className="project-info">
-      <div class="project-info__container">
+      <div className="project-info__container">
         <div className="project-info__block">
-          <h2 class="project-info__title">ФАБРИКА ДЕРЕВЯННОЙ ИГРУШКИ</h2>
-          <p class="project-info__tags">
+          <h2 className="project-info__title">ФАБРИКА ДЕРЕВЯННОЙ ИГРУШКИ</h2>
+          <p className="project-info__tags">
             Брендинг, графика, упаковка,
             <br />
             предметный дизайн
           </p>
         </div>
         <div className="project-info__objectives">
-          <div class="project-info__task">
-            <p class="project-info__task-title">Задача:</p>
-            <p class="project-info__task-text">
+          <div className="project-info__task">
+            <p className="project-info__task-title">Задача:</p>
+            <p className="project-info__task-text">
               Ребрендинг фабрики, создание мерча
               <br /> и сувенирных игрушек.
             </p>
           </div>
-          <div class="project-info__solution">
-            <p class="project-info__solution-title">Решение:</p>
-            <p class="project-info__solution-text">
+          <div className="project-info__solution">
+            <p className="project-info__solution-title">Решение:</p>
+            <p className="project-info__solution-text">
               Образы игрушек – фольклорные герои.
               <br /> В знак заложена первая ассоциация с<br /> деревянной
               игрушкой – детская деревянная

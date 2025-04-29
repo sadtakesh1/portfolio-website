@@ -118,6 +118,7 @@
     max-width: 400px;
     font-family: "Intel-light", sans-serif;
     font-size: 16px;
+    padding-left: 4px;
   }
 
   &__solution {
@@ -246,20 +247,22 @@
   .project-info-lenta__container {
     flex-direction: column;
     gap: 20px;
-    padding: 0 20px;
   }
 
   .project-info-lenta__block,
   .project-info-lenta__objectives {
     max-width: 100%;
+    padding-left: 0;
   }
 
   .project-info-lenta__title {
     font-size: 22px;
+    text-align: center;
   }
 
   .project-info-lenta__tags {
     font-size: 16px;
+    text-align: center;
   }
 
   .project-info-lenta__description,
@@ -284,7 +287,7 @@
 
 @media (max-width: 768px) {
   .project-info-lenta__title {
-    font-size: 20px;
+    font-size: 22px;
   }
 
   .project-info-lenta__tags,
@@ -292,6 +295,6 @@
   .project-info-lenta__description-case,
   .project-info-lenta__description-case-second,
   .project-info-lenta__objectives {
-    font-size: 14px;
+    font-size: 16px;
   }
 }

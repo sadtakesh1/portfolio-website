@@ -2,7 +2,7 @@ const experienceData = [
   {
     id: 1,
     startDate: "SEP 2023",
-    endDate: null,
+    endDate: "MAY 2025",
     company: "Правильное решение",
     position: "Тимлид.",
     description: "Создание, развитие\nи поддержание айдентики\n3* брендов.",
@@ -26,7 +26,7 @@ const experienceData = [
   {
     id: 4,
     startDate: "MAY 2019",
-    endDate: null,
+    endDate: "NOW",
     company: "Фриланс",
     position: "Графический дизайнер.",
     description:

@@ -24,7 +24,7 @@
     }
   }
   &__image {
-    max-width: 936px;
+    min-width: 1080px;
     display: block; /* важно для margin: auto */
     margin: 0 auto;
     &:last-child {
@@ -80,6 +80,7 @@
     max-width: 400px;
     font-family: "Intel-light", sans-serif;
     font-size: 18px;
+    padding-left: 4px;
   }
 
   &__solution {
@@ -170,7 +171,7 @@
   .project-info-yasno__image,
   .project-info-yasno__image-textures {
     max-width: 100%;
-    min-width: unset;
+    min-width: 100%;
     height: auto;
     object-fit: contain;
     // margin: 0 auto 40px;
@@ -190,20 +191,22 @@
   .project-info-yasno__container {
     flex-direction: column;
     gap: 20px;
-    padding: 0 20px;
   }
 
   .project-info-yasno__block,
   .project-info-yasno__objectives {
     max-width: 100%;
+    padding-left: 0;
   }
 
   .project-info-yasno__title {
     font-size: 22px;
+    text-align: center;
   }
 
   .project-info-yasno__tags {
     font-size: 16px;
+    text-align: center;
   }
 
   .project-info-yasno__description,
@@ -217,7 +220,7 @@
 
 @media (max-width: 768px) {
   .project-info-yasno__title {
-    font-size: 20px;
+    font-size: 22px;
   }
 
   .project-info-yasno__tags,
@@ -225,6 +228,6 @@
   .project-info-yasno__description,
   .project-info-yasno__description-case,
   .project-info-yasno__description-case-second {
-    font-size: 14px;
+    font-size: 16px;
   }
 }

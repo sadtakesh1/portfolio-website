@@ -5,7 +5,6 @@
     display: flex;
     flex-direction: column;
     max-width: 450px;
-    // align-items: flex-start;
     margin: 100px 0 0 0;
     position: sticky;
     float: left;
@@ -19,17 +18,24 @@
       background: none;
       border: none;
       outline: none;
-      padding: 0; // Убирает внутренние отступы (если нужно)
-      margin: 0; // Убирает внешние отступы (если нужно)
+      padding: 0;
+      margin: 0;
       cursor: pointer;
+
       &:hover {
         color: black;
       }
+      &.active {
+        color: black;
+      }
     }
-    &-button-projects {
-      display: flex; // Добавляем flex-контейнер
-      align-items: center; // Выравниваем по вертикали
-      gap: 2.5px; // Добавляем расстояние между гифкой и текстом
+
+    &-button-projects,
+    &-button-about,
+    &-button-contacts {
+      display: flex;
+      align-items: center;
+      gap: 2.5px;
 
       &::before {
         content: "";
@@ -39,14 +45,14 @@
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
-        opacity: 0; // Изначально скрываем
+        opacity: 0;
+        transition: opacity 0.3s ease;
       }
+    }
 
-      &:hover:before {
-        content: "";
-        display: block;
-        width: 50px;
-        height: 50px;
+    &-button-projects {
+      &:hover::before,
+      &.active::before {
         background: url("../assets/images/projects.gif") no-repeat
           center/contain;
         opacity: 1;
@@ -54,52 +60,16 @@
     }
 
     &-button-about {
-      display: flex; // Добавляем flex-контейнер
-      align-items: center; // Выравниваем по вертикали
-      gap: 2.5px; // Добавляем расстояние между гифкой и текстом
-
-      &::before {
-        content: "";
-        display: block;
-        width: 50px;
-        height: 50px;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        opacity: 0; // Изначально скрываем
-      }
-
-      &:hover:before {
-        content: "";
-        display: block;
-        width: 50px;
-        height: 50px;
+      &:hover::before,
+      &.active::before {
         background: url("../assets/images/about.gif") no-repeat center/contain;
         opacity: 1;
       }
     }
 
     &-button-contacts {
-      display: flex; // Добавляем flex-контейнер
-      align-items: center; // Выравниваем по вертикали
-      gap: 2.5px; // Добавляем расстояние между гифкой и текстом
-
-      &::before {
-        content: "";
-        display: block;
-        width: 50px;
-        height: 50px;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        opacity: 0; // Изначально скрываем
-      }
-
-      &:hover:before {
-        content: "";
-        display: block;
-        width: 50px;
-        height: 50px;
+      &:hover::before,
+      &.active::before {
         background: url("../assets/images/contacts.gif") no-repeat
           center/contain;
         opacity: 1;
@@ -132,7 +102,8 @@
           display: none;
         }
 
-        &:hover::before {
+        &:hover::before,
+        &.active::before {
           display: none;
         }
       }
@@ -152,7 +123,9 @@
       &::before {
         display: none;
       }
-      &:hover::before {
+
+      &:hover::before,
+      &.active::before {
         display: none;
       }
     }

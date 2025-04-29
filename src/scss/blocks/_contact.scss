@@ -1,0 +1,167 @@
+.contact {
+  max-width: 600px;
+  margin: 100px auto;
+  position: relative;
+
+  &__line {
+    position: absolute;
+    width: 0.5px;
+    height: 0;
+    background: black;
+    animation: drawSecondLine 1s linear forwards;
+    top: 0;
+    left: -15px;
+  }
+
+  @keyframes drawSecondLine {
+    from {
+      height: 0;
+    }
+    to {
+      height: 350px;
+    }
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: textAppear 1s ease-out forwards;
+    animation-delay: 0.5s; // (время можно менять, чтобы появлялись поочерёдно)
+
+    &-title {
+      font-size: 50px;
+      font-family: "Cakra", sans-serif;
+      color: #b4b4b4;
+
+      &-highlight {
+        color: black;
+
+        &:last-of-type::after {
+          content: "";
+          display: inline-block;
+          width: 50px; // ← подгони под нужный размер гифки
+          height: 50px;
+          margin-left: 10px;
+          vertical-align: middle;
+          background: url("../assets/images/heart.gif"); // ← укажи путь к твоей гифке
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+      }
+    }
+
+    &-text {
+      font-size: 18px;
+      font-family: "AvantGardeGothicC", sans-serif;
+      font-weight: lighter;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 18px;
+    font-family: "AvantGardeGothicC", sans-serif;
+    font-weight: normal;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: textAppear 1s ease-out forwards;
+    animation-delay: 0.5s; // (время можно менять, чтобы появлялись поочерёдно)
+
+    &-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      &:hover {
+        .contact__list-dot {
+          background-color: #b4b4b4;
+        }
+
+        .contact__list-link {
+          color: #b4b4b4;
+        }
+      }
+    }
+
+    &-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: black;
+      flex-shrink: 0;
+      transform: translateY(3px);
+    }
+
+    &-link {
+      font-size: 18px;
+      color: black;
+      font-family: "AvantGardeGothicC", sans-serif;
+      text-decoration: none;
+
+      //   &:hover {
+      //     color: #b4b4b4;
+      //   }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .contact {
+    margin: 30px auto;
+    text-align: center;
+    &__container-text {
+      font-size: 20px;
+    }
+    &__container-title {
+      font-size: 42px;
+    }
+
+    &__line {
+      display: none;
+    }
+
+    &__list {
+      align-items: center;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .contact {
+    margin: 0 auto;
+
+    &__container-title {
+      font-size: 28px;
+    }
+
+    &__container-text {
+      margin-top: 15px;
+      font-size: 16px;
+    }
+
+    &__list {
+      margin-top: 15px;
+      font-size: 16px;
+
+      &-link {
+        font-size: 16px;
+      }
+
+      &-dot {
+        width: 10px;
+        height: 10px;
+        transform: translateY(2px);
+      }
+    }
+
+    &__line {
+      display: none;
+    }
+  }
+}
