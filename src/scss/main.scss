@@ -42,14 +42,16 @@ ul a:active {
 
 @font-face {
   font-family: "AvantGardeGothicC";
-  src: url("../assets/fonts/AvantGardeGothicC.otf") format("otf");
+  src: url("../assets/fonts/avantgardegothicc.woff2") format("woff2"),
+  url("../assets/fonts/avantgardegothicc.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gilroy-Bold";
-  src: url("../assets/fonts/Gilroy-Bold.ttf") format("ttf");
+  src: url("../assets/fonts/gilroy-semibold.woff2") format("woff2"),
+  url("../assets/fonts/gilroy-semibold.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
