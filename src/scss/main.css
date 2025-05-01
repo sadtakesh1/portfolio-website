@@ -387,7 +387,7 @@ ul a:active {
 .about__dot {
   position: absolute;
   left: 0;
-  top: 346px;
+  top: 339px;
   width: 15px;
   height: 15px;
   background: black;
@@ -397,19 +397,19 @@ ul a:active {
   animation: dotAppear 1s 1s ease-out forwards;
 }
 .about__dot:nth-child(2) {
-  top: 488px;
+  top: 482px;
   animation-delay: 1s;
 }
 .about__dot:nth-child(3) {
-  top: 590px;
+  top: 585px;
   animation-delay: 1s;
 }
 .about__dot:nth-child(4) {
-  top: 713px;
+  top: 707px;
   animation-delay: 1s;
 }
 .about__dot:nth-child(5) {
-  top: 854px;
+  top: 848px;
   animation-delay: 1s;
 }
 @keyframes dotAppear {
@@ -424,7 +424,6 @@ ul a:active {
 }
 .about__skills {
   margin: 60px 0 0 0;
-  max-width: 335px;
   width: 100%;
   font-size: 1.688rem;
   font-weight: 100;
@@ -2434,6 +2433,7 @@ ul a:active {
 }
 .contact {
   max-width: 600px;
+  width: 100%;
   margin: 100px auto;
   position: relative;
 }
@@ -2463,7 +2463,7 @@ ul a:active {
   animation-delay: 0.5s;
 }
 .contact__container-title {
-  font-size: 50px;
+  font-size: 3.125rem;
   font-family: "Cakra", sans-serif;
   color: #b4b4b4;
 }
@@ -2483,7 +2483,7 @@ ul a:active {
   background-position: center;
 }
 .contact__container-text {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-family: "AvantGardeGothicC", sans-serif;
   font-weight: lighter;
 }
@@ -2494,7 +2494,7 @@ ul a:active {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-family: "AvantGardeGothicC", sans-serif;
   font-weight: normal;
   opacity: 0;
@@ -2522,7 +2522,7 @@ ul a:active {
   transform: translateY(3px);
 }
 .contact__list-link {
-  font-size: 18px;
+  font-size: 1.125rem;
   color: black;
   font-family: "AvantGardeGothicC", sans-serif;
   text-decoration: none;
@@ -2534,10 +2534,10 @@ ul a:active {
     text-align: center;
   }
   .contact__container-text {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
   .contact__container-title {
-    font-size: 42px;
+    font-size: 2.625rem;
   }
   .contact__line {
     display: none;
@@ -2551,18 +2551,18 @@ ul a:active {
     margin: 0 auto;
   }
   .contact__container-title {
-    font-size: 28px;
+    font-size: 1.75rem;
   }
   .contact__container-text {
     margin-top: 15px;
-    font-size: 16px;
+    font-size: 1rem;
   }
   .contact__list {
     margin-top: 15px;
-    font-size: 16px;
+    font-size: 1rem;
   }
   .contact__list-link {
-    font-size: 16px;
+    font-size: 1rem;
   }
   .contact__list-dot {
     width: 10px;

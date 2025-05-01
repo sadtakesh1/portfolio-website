@@ -24,7 +24,7 @@
   &__dot {
     position: absolute;
     left: 0;
-    top: 346px;
+    top: 339px;
     width: 15px;
     height: 15px;
     background: black;
@@ -34,19 +34,19 @@
     animation: dotAppear 1s 1s ease-out forwards;
 
     &:nth-child(2) {
-      top: 488px;
+      top: 482px;
       animation-delay: 1s;
     }
     &:nth-child(3) {
-      top: 590px;
+      top: 585px;
       animation-delay: 1s;
     }
     &:nth-child(4) {
-      top: 713px;
+      top: 707px;
       animation-delay: 1s;
     }
     &:nth-child(5) {
-      top: 854px;
+      top: 848px;
       animation-delay: 1s;
     }
   }
@@ -81,7 +81,7 @@
 
   &__skills {
     margin: 60px 0 0 0;
-    max-width: 335px;
+    // max-width: 335px;
     width: 100%;
     font-size: 1.688rem;
     font-weight: 100;

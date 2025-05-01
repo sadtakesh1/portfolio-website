@@ -1,5 +1,6 @@
 .contact {
   max-width: 600px;
+  width: 100%;
   margin: 100px auto;
   position: relative;
 
@@ -30,7 +31,7 @@
     animation-delay: 0.5s; // (время можно менять, чтобы появлялись поочерёдно)
 
     &-title {
-      font-size: 50px;
+      font-size: 3.125rem;
       font-family: "Cakra", sans-serif;
       color: #b4b4b4;
 
@@ -53,7 +54,7 @@
     }
 
     &-text {
-      font-size: 18px;
+      font-size: 1.125rem;
       font-family: "AvantGardeGothicC", sans-serif;
       font-weight: lighter;
     }
@@ -66,7 +67,7 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-family: "AvantGardeGothicC", sans-serif;
     font-weight: normal;
     opacity: 0;
@@ -99,7 +100,7 @@
     }
 
     &-link {
-      font-size: 18px;
+      font-size: 1.125rem;
       color: black;
       font-family: "AvantGardeGothicC", sans-serif;
       text-decoration: none;
@@ -116,10 +117,10 @@
     margin: 30px auto;
     text-align: center;
     &__container-text {
-      font-size: 20px;
+      font-size: 1.25rem;
     }
     &__container-title {
-      font-size: 42px;
+      font-size: 2.625rem;
     }
 
     &__line {
@@ -137,20 +138,20 @@
     margin: 0 auto;
 
     &__container-title {
-      font-size: 28px;
+      font-size: 1.75rem;
     }
 
     &__container-text {
       margin-top: 15px;
-      font-size: 16px;
+      font-size: 1rem;
     }
 
     &__list {
       margin-top: 15px;
-      font-size: 16px;
+      font-size: 1rem;
 
       &-link {
-        font-size: 16px;
+        font-size: 1rem;
       }
 
       &-dot {
