@@ -55,6 +55,13 @@ ul a:active {
   font-weight: normal;
   font-style: normal;
 }
+// @font-face {
+//   font-family: "Gilroy-Bold";
+//   src: url("../assets/fonts/gilroy-semibold.woff2") format("woff2"),
+//     url("../assets/fonts/gilroy-semibold.woff") format("woff");
+//   font-weight: normal;
+//   font-style: normal;
+// }
 
 @import "./blocks/page.scss";
 @import "./blocks/content.scss";
@@ -75,3 +82,4 @@ ul a:active {
 @import "./blocks/project-info-muithom.scss";
 @import "./blocks/contact.scss";
 @import "./blocks/scrolltotopbutton.scss";
+@import "./blocks/project-info-pk.scss";

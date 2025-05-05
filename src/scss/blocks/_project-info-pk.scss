@@ -1,0 +1,458 @@
+.project-info-pk {
+  position: relative;
+
+  &__container {
+    margin: 60px 0 30px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__block {
+    max-width: 463px;
+  }
+
+  &__title {
+    font-family: "Cakra", sans-serif;
+    font-size: 26px;
+    font-weight: 500;
+  }
+
+  &__tags {
+    font-family: "AvantGardeGothicC", sans-serif;
+    font-style: italic;
+    font-size: 16px;
+  }
+
+  &__objectives {
+    max-width: 400px;
+    font-family: "AvantGardeGothicC", sans-serif;
+    font-size: 16px;
+    padding-left: 4px;
+  }
+
+  &__solution {
+    margin-top: 10px;
+
+    &-title {
+      position: relative;
+      display: inline-block;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -2px;
+        height: 40%;
+        background: rgba(0, 0, 0, 0.1);
+        z-index: 1;
+      }
+    }
+
+    &-text:last-of-type {
+      margin-top: 10px;
+    }
+  }
+
+  &__task {
+    &-title {
+      position: relative;
+      display: inline-block;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -2px;
+        height: 40%;
+        background: rgba(0, 0, 0, 0.1);
+        z-index: 1;
+      }
+    }
+  }
+
+  &__case {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-width: 1080px;
+    margin: 0 0 60px 0;
+    position: relative;
+
+    &-image {
+      max-width: 677px;
+      width: 100%;
+      margin-right: -50px;
+
+      &--second {
+        max-width: 688px;
+        width: 100%;
+        margin-right: 0;
+      }
+      &-absolute {
+        position: absolute;
+        bottom: 20px;
+        left: 180px;
+
+        &-second {
+          position: absolute;
+          bottom: 100px;
+          left: 150px;
+        }
+      }
+    }
+  }
+
+  &__description {
+    margin-bottom: 60px;
+    max-width: 463px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-family: "Intel-light", sans-serif;
+    font-size: 18px;
+
+    &-text {
+      font-family: "Gilroy-Bold", sans-serif;
+      font-size: 24px;
+      &-bold {
+        font-family: "Gilroy-Bold", sans-serif;
+        letter-spacing: 1.5px;
+        line-height: 1;
+        font-weight: bold;
+        font-size: 33px;
+        margin-top: 35px;
+      }
+    }
+
+    &-case {
+      max-width: 341px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      //   font-size: 16px;
+      justify-content: center;
+
+      &--second {
+        justify-content: start;
+        max-width: 377px;
+      }
+
+      &-second {
+        max-width: 496px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        font-size: 16px;
+      }
+    }
+  }
+  &__image {
+    max-width: 1080px;
+    max-height: 730px;
+    width: 100%;
+    // min-width: 1080px;
+    object-fit: cover;
+
+    &--second {
+      max-height: 100%;
+    }
+    &-container {
+      max-width: 1080px;
+      width: 100%;
+      margin-bottom: 50px;
+      position: relative;
+
+      &--third {
+        margin-bottom: 0;
+      }
+    }
+
+    &-text {
+      &-container {
+        position: absolute;
+        top: 150px;
+        left: 80px;
+        display: flex;
+        flex-direction: column;
+        gap: 0.313rem;
+        max-width: 347px;
+        max-height: 342px;
+        width: 100%;
+        font-family: "Gilroy-Bold", sans-serif;
+        font-size: 1.5rem;
+        &--second {
+          top: 100px;
+          left: 50px;
+        }
+
+        &--third {
+          top: 100px;
+          left: 100px;
+        }
+        &--fourth {
+          top: 100px;
+          left: 100px;
+        }
+        &--fifth {
+          top: 50px;
+          left: 50px;
+          gap: 0.625rem;
+        }
+        &--sixth {
+          top: 50px;
+          left: 100px;
+          gap: 0.625rem;
+        }
+      }
+    }
+    &-absolute {
+      &-first {
+        position: absolute;
+        z-index: 0;
+        bottom: 1375px;
+        left: 890px;
+      }
+
+      &-second {
+        position: absolute;
+        z-index: 0;
+        top: 1780px;
+        left: -212px;
+      }
+
+      &-third {
+        position: absolute;
+        z-index: 0;
+        bottom: 792px;
+        left: -190px;
+      }
+    }
+
+    &-last {
+      max-width: 1080px;
+      max-height: 600px;
+      margin: 0;
+      min-width: 1080px;
+      //   min-height: 600px;
+      object-fit: cover;
+    }
+
+    &-overlap {
+      margin-top: -30px;
+      margin-left: -70px;
+      margin-bottom: 60px;
+
+      &-second {
+        margin-top: -30px;
+        margin-bottom: 60px;
+      }
+    }
+
+    &-textures {
+      max-width: 1080px;
+      max-height: 156px;
+      margin-bottom: 60px;
+      min-width: 1080px;
+      object-fit: cover;
+    }
+  }
+  @media (max-width: 1024px) {
+    .project-info-pk {
+      &__title {
+        font-size: 1rem;
+        text-align: center;
+      }
+
+      &__tags {
+        font-size: 1rem;
+        text-align: center;
+      }
+
+      &__block,
+      &__objectives,
+      &__description {
+        max-width: 100%;
+        font-size: 1rem;
+      }
+      &__task-text {
+        font-size: 1rem;
+      }
+      &__task-title,
+      &__solution-title {
+        font-size: 1rem;
+      }
+
+      &__description {
+        gap: 12px;
+        margin-bottom: 50px;
+      }
+
+      &__task-title::before,
+      &__solution-title::before {
+        height: 35%;
+      }
+      &__container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+
+        // gap: 40px;
+        margin: 40px 0 30px 0;
+      }
+
+      &__case {
+        flex-direction: column-reverse;
+        align-items: center;
+
+        min-width: 100%;
+        text-align: center;
+      }
+
+      &__case-image {
+        margin-right: 0;
+
+        &--second {
+          max-width: 777px;
+        }
+      }
+
+      &__description {
+        align-items: center;
+        max-width: 100%;
+        font-size: 1rem;
+
+        &-text {
+          font-size: 1rem;
+
+          &-bold {
+            font-size: 1rem;
+          }
+        }
+
+        &-case,
+        &-case--second,
+        &-case-second {
+          max-width: 100%;
+          text-align: center;
+          gap: 5px;
+        }
+      }
+
+      &__image {
+        // max-width: 100%;
+        // max-height: none;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        margin-bottom: 0;
+        max-width: 100%;
+        min-width: auto;
+        min-height: auto;
+        &-container {
+          max-width: 100%;
+          margin-bottom: 30px;
+        }
+
+        &-text-container {
+          top: 50px;
+          left: 20px;
+          font-size: 1rem;
+          max-width: 90%;
+          position: unset;
+
+          &--second,
+          &--third,
+          &--fourth,
+          &--fifth,
+          &--sixth {
+            top: 50px;
+            left: 20px;
+          }
+        }
+
+        &-absolute {
+          &-first,
+          &-second,
+          &-third {
+            display: none; // отключим абсолютные декоры на планшетах
+          }
+        }
+
+        &-last,
+        &-textures {
+          max-width: 100%;
+          min-width: auto;
+        }
+
+        &-overlap,
+        &-overlap-second {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+
+    .project-info-pk {
+      &__image-text-container {
+        gap: 0.3rem
+      }
+      &__case{
+        margin: 0 0 30px 0;
+      }
+      &__title {
+        font-size: 22px;
+      }
+
+      &__tags,
+      &__objectives {
+        font-size: 14px;
+      }
+
+      &__solution {
+        font-size: 1rem;
+        &-text:last-of-type {
+          font-size: 1rem;
+        }
+      }
+
+      &__description {
+        &-case{
+          text-align: start;
+        }
+        font-size: 1rem;
+
+        &-text {
+          font-size: 1rem;
+
+          &-bold {
+            font-size: 1.125rem;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .project-info-pk {
+      &__description {
+        gap: 10px;
+
+        &-text-bold {
+          font-size: 20px;
+        }
+      }
+
+      &__image-text-container {
+        top: 30px;
+        left: 10px;
+        font-size: 1rem;
+      }
+    }
+  }
+}

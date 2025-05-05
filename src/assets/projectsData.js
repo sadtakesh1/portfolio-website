@@ -48,12 +48,13 @@ const projectsData = [
     description: "Иллюстрация",
     link: "Yasno",
   },
-  // {
-  //     id: 8,
-  //     gif: require('../assets/images/kosmetika-preview.gif'),
-  //     title: 'pravilNaya kosmetika',
-  //     description: 'Брендинг, иллюстрация, упаковка, SMM',
-  // }
+  {
+    id: 8,
+    gif: require("../assets/images/pk-preview.png"),
+    title: "pravilNaya kosmetika",
+    description: "Брендинг, иллюстрация, упаковка, SMM",
+    link: "PravilnayaKosmetika",
+  },
 ];
 
 export default projectsData;
