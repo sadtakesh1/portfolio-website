@@ -35,7 +35,7 @@ function Lenta() {
       <div className="project-info-lenta__video-grid">
         {lentaVideos.map((video) => (
           <div key={video.id} className="project-info-lenta__video-container">
-            <VideoPlayer src={video.src} />
+            <VideoPlayer src={video.src} poster={video.poster} />
           </div>
         ))}
       </div>

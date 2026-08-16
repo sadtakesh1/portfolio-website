@@ -44,6 +44,12 @@ ul a:active {
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "Bebas Neue";
+  src: url("../assets/fonts/BebasNeue.woff2") format("woff2"), url("../assets/fonts/BebasNeue.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 .page {
   background-color: white;
 }
@@ -3042,7 +3048,6 @@ ul a:active {
 .project-info-krygina__split-item .video-player {
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
 .project-info-krygina__split-item--red {
   background-color: #b00e17;
@@ -3144,9 +3149,9 @@ ul a:active {
   margin-bottom: 100px;
 }
 .project-info-krygina__outro-logo {
-  font-family: "Gilroy-Bold", sans-serif;
+  font-family: Bebas Neue;
   font-weight: bold;
-  font-size: 84px;
+  font-size: 182px;
   letter-spacing: -1px;
   color: #db001c;
 }
@@ -3356,7 +3361,7 @@ ul a:active {
     line-height: 1.25;
   }
   .project-info-krygina__gallery {
-    padding: 32px 0;
+    padding: 8px 0;
     margin-bottom: 36px;
   }
   .project-info-krygina__gallery-grid {
@@ -3397,7 +3402,7 @@ ul a:active {
     flex: none;
     width: 100%;
     height: auto;
-    aspect-ratio: 1080/885;
+    aspect-ratio: 4/7;
     object-fit: cover;
   }
   .project-info-krygina__outro {

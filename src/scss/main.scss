@@ -58,6 +58,15 @@ ul a:active {
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: "Bebas Neue";
+  src:
+    url("../assets/fonts/BebasNeue.woff2") format("woff2"),
+    url("../assets/fonts/BebasNeue.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 // @font-face {
 //   font-family: "Gilroy-Bold";
 //   src: url("../assets/fonts/gilroy-semibold.woff2") format("woff2"),
