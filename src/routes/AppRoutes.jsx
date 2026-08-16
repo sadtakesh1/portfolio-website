@@ -9,8 +9,9 @@ import Ozon from "../pages/Ozon";
 import Yasno from "../pages/Yasno";
 import Yo from "../pages/Yo";
 import Lenta from "../pages/Lenta";
-import Muithom from "../pages/Muithom"
+import Muithom from "../pages/Muithom";
 import PravilnayaKosmetika from "../pages/PravilnayaKosmetika";
+import Krygina from "../pages/Krygina";
 
 const AppRoutes = () => {
   return (
@@ -27,7 +28,11 @@ const AppRoutes = () => {
       <Route path="projects/Yo" element={<Yo />} />
       <Route path="projects/Lenta" element={<Lenta />} />
       <Route path="projects/Muithom" element={<Muithom />} />
-      <Route path="projects/PravilnayaKosmetika" element={<PravilnayaKosmetika />} />
+      <Route
+        path="projects/PravilnayaKosmetika"
+        element={<PravilnayaKosmetika />}
+      />
+      <Route path="projects/Krygina" element={<Krygina />} />
     </Routes>
   );
 };

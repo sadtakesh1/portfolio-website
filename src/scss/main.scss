@@ -27,7 +27,8 @@ ul a:active {
 
 @font-face {
   font-family: "Cakra";
-  src: url("../assets/fonts/Cakra-Normal.woff2") format("woff2"),
+  src:
+    url("../assets/fonts/Cakra-Normal.woff2") format("woff2"),
     url("../assets/fonts/Cakra-Normal.woff") format("woff");
   font-weight: normal;
   font-style: normal;
@@ -42,7 +43,8 @@ ul a:active {
 
 @font-face {
   font-family: "AvantGardeGothicC";
-  src: url("../assets/fonts/avantgardegothicc.woff2") format("woff2"),
+  src:
+    url("../assets/fonts/avantgardegothicc.woff2") format("woff2"),
     url("../assets/fonts/avantgardegothicc.woff") format("woff");
   font-weight: normal;
   font-style: normal;
@@ -50,7 +52,8 @@ ul a:active {
 
 @font-face {
   font-family: "Gilroy-Bold";
-  src: url("../assets/fonts/gilroy-semibold.woff2") format("woff2"),
+  src:
+    url("../assets/fonts/gilroy-semibold.woff2") format("woff2"),
     url("../assets/fonts/gilroy-semibold.woff") format("woff");
   font-weight: normal;
   font-style: normal;
@@ -83,3 +86,5 @@ ul a:active {
 @import "./blocks/contact.scss";
 @import "./blocks/scrolltotopbutton.scss";
 @import "./blocks/project-info-pk.scss";
+@import "./blocks/project-info-krygina.scss";
+@import "./blocks/videoplayer.scss";

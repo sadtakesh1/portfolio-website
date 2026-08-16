@@ -3,6 +3,7 @@ import mainGif from "../assets/images/lenta/main-gif.gif";
 import lentaVideos from "../assets/lentaVideos";
 import { AutoScrollCarousel } from "./AutoScrollCarousel";
 import AutoCycleCards from "../components/AutoCycleCards";
+import VideoPlayer from "../components/VideoPlayer";
 import circleImage from "../assets/images/lenta/circle.svg";
 import groupCirclesImage from "../assets/images/lenta/group-of-circles.svg";
 import petalsImage from "../assets/images/lenta/petals.svg";
@@ -30,14 +31,11 @@ function Lenta() {
       </div>
       <img className="project-info-lenta__image" src={mainGif} alt="1" />
 
-      {/*Видео-блок */}
+      {/* Видео-блок */}
       <div className="project-info-lenta__video-grid">
         {lentaVideos.map((video) => (
           <div key={video.id} className="project-info-lenta__video-container">
-            <video controls className="project-info-lenta__video-player">
-              <source src={video.src} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            <VideoPlayer src={video.src} />
           </div>
         ))}
       </div>

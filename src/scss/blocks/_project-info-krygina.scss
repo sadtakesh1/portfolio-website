@@ -1,0 +1,649 @@
+$krygina-red: #db001c;
+$krygina-red-deep: #b00e17;
+$krygina-lavender: #f1eff5;
+
+.project-info-krygina {
+  overflow-x: hidden;
+
+  // ===== Шапка кейса (заголовок / теги / задача-решение) =====
+  // Паттерн 1-в-1 повторяет остальные кейсы проекта (см. _projectinfo.scss)
+  &__container {
+    margin: 60px 0 30px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-family: "Cakra", sans-serif;
+    font-size: 26px;
+    font-weight: 500;
+  }
+
+  &__tags {
+    font-family: "Intel-light", sans-serif;
+    font-style: italic;
+    font-size: 18px;
+  }
+
+  &__block {
+    max-width: 463px;
+  }
+
+  &__objectives {
+    max-width: 400px;
+    font-family: "Intel-light", sans-serif;
+    font-size: 18px;
+    padding-right: 8px;
+  }
+
+  &__solution {
+    margin-top: 10px;
+  }
+
+  &__task-title,
+  &__solution-title {
+    position: relative;
+    display: inline-block;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -2px;
+      height: 40%;
+      background: rgba(0, 0, 0, 0.1);
+      z-index: 1;
+    }
+  }
+
+  // ===== Hero: KRYGINA / ALLURE BB CREAM =====
+  &__hero {
+    display: flex;
+    align-items: center;
+    min-height: 460px;
+    margin-bottom: 60px;
+  }
+
+  &__hero-content {
+    flex: 0 0 42%;
+    max-width: 420px;
+    padding-right: 30px;
+  }
+
+  &__hero-logo {
+    font-family: "Gilroy-Bold", sans-serif;
+    font-weight: bold;
+    font-size: 88px;
+    line-height: 0.92;
+    letter-spacing: -1px;
+    color: $krygina-red;
+  }
+
+  &__hero-subtitle {
+    font-family: "Gilroy-Bold", sans-serif;
+    font-weight: bold;
+    font-size: 26px;
+    letter-spacing: 1px;
+    color: $krygina-red;
+    margin-top: 10px;
+  }
+
+  &__hero-text {
+    font-family: "Intel-light", sans-serif;
+    font-size: 17px;
+    line-height: 1.5;
+    color: #1a1a1a;
+    margin-top: 20px;
+    max-width: 340px;
+  }
+
+  &__hero-image {
+    flex: 1;
+    height: 460px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  // ===== Сплит: видео/фото 50 на 50, встык =====
+  &__split {
+    display: flex;
+    gap: 0;
+    margin-bottom: 60px;
+  }
+
+  &__split-item {
+    flex: 1 1 50%;
+    height: 821px;
+    overflow: hidden;
+
+    img,
+    .video-player {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &--red {
+      background-color: $krygina-red-deep;
+    }
+  }
+
+  // ===== Оттенки 01 / 02 / 03 =====
+  &__shades {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 60px;
+  }
+
+  &__shade-image {
+    width: 100%;
+    aspect-ratio: 4 / 7;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+
+  &__shade-name {
+    font-family: "Gilroy-Bold", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    color: $krygina-red;
+  }
+
+  &__shade-description {
+    font-family: "AvantGardeGothicC", sans-serif;
+    font-size: 16px;
+    color: $krygina-red;
+    opacity: 0.85;
+    margin-top: 6px;
+  }
+
+  // ===== Красная секция с сеткой SMM-карточек (full-bleed) =====
+  &__gallery {
+    background-color: $krygina-red-deep;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    padding: 60px 0;
+    margin-bottom: 60px;
+  }
+
+  &__gallery-grid {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+  }
+
+  &__gallery-image {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+  }
+
+  // ===== До / после (одна фотография + подписи) =====
+  &__before-after {
+    position: relative;
+    margin-bottom: 60px;
+  }
+
+  &__before-after-image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 2 / 1;
+    object-fit: cover;
+  }
+
+  &__before-after-badge {
+    position: absolute;
+    bottom: 50px;
+    background-color: $krygina-red;
+    color: #ffffff;
+    font-family: "Gilroy-Bold", sans-serif;
+    font-weight: bold;
+    font-size: 36px;
+    letter-spacing: 1px;
+    padding: 10px 28px;
+
+    &--before {
+      left: 50px;
+      transform: translateX(50%);
+    }
+
+    &--after {
+      right: 0px;
+      transform: translateX(-50%);
+    }
+  }
+
+  // ===== Упаковка =====
+  &__packaging {
+    display: flex;
+    gap: 0px;
+    margin-bottom: 60px;
+  }
+
+  &__packaging-image {
+    flex: 1 1 50%;
+    width: 100%;
+    height: 885px;
+    object-fit: cover;
+  }
+
+  // ===== Финальный логотип (full-bleed) =====
+  &__outro {
+    background-color: $krygina-lavender;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    padding: 140px 0;
+    text-align: center;
+    margin-bottom: 100px;
+  }
+
+  &__outro-logo {
+    font-family: "Gilroy-Bold", sans-serif;
+    font-weight: bold;
+    font-size: 84px;
+    letter-spacing: -1px;
+    color: $krygina-red;
+  }
+}
+
+// ===================== Адаптив =====================
+// Desktop-стили выше не трогаем. На планшете только уменьшаем масштабы,
+// полноценную одноколоночную композицию включаем на мобильных.
+@media (max-width: 1024px) {
+  .project-info-krygina {
+    &__container {
+      margin: 42px 0 28px;
+      gap: 40px;
+    }
+
+    &__title {
+      font-size: 22px;
+    }
+
+    &__tags,
+    &__objectives {
+      font-size: 16px;
+    }
+
+    &__block {
+      max-width: 420px;
+    }
+
+    &__hero {
+      min-height: 380px;
+      margin-bottom: 48px;
+    }
+
+    &__hero-content {
+      flex-basis: 40%;
+      padding-right: 24px;
+    }
+
+    &__hero-logo {
+      font-size: 64px;
+    }
+
+    &__hero-subtitle {
+      font-size: 22px;
+    }
+
+    &__hero-text {
+      font-size: 16px;
+    }
+
+    &__hero-image {
+      height: 380px;
+    }
+
+    &__split,
+    &__shades,
+    &__gallery,
+    &__before-after,
+    &__packaging {
+      margin-bottom: 48px;
+    }
+
+    &__split-item {
+      height: clamp(520px, 68vw, 700px);
+    }
+
+    &__shades {
+      gap: 14px;
+    }
+
+    &__shade-name {
+      font-size: 17px;
+    }
+
+    &__shade-description {
+      font-size: 14px;
+    }
+
+    &__gallery {
+      padding: 48px 0;
+    }
+
+    &__gallery-grid {
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+      padding: 0 24px;
+    }
+
+    &__before-after-badge {
+      bottom: 32px;
+      font-size: 24px;
+      padding: 9px 22px;
+
+      &--before {
+        left: 4%;
+        transform: translateX(50%);
+      }
+
+      &--after {
+        right: 4%;
+        transform: translateX(-50%);
+      }
+    }
+
+    &__packaging-image {
+      height: auto;
+      aspect-ratio: 1080 / 885;
+    }
+
+    &__outro {
+      padding: 100px 0;
+      margin-bottom: 72px;
+    }
+
+    &__outro-logo {
+      font-size: 60px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .project-info-krygina {
+    // ----- Вводный блок -----
+    &__container {
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 20px;
+      margin: 28px 0 32px;
+    }
+
+    &__title {
+      font-size: 20px;
+      line-height: 1.1;
+    }
+
+    &__tags {
+      margin-top: 4px;
+      font-size: 14px;
+      line-height: 1.35;
+    }
+
+    &__block,
+    &__objectives {
+      max-width: 100%;
+    }
+
+    &__objectives {
+      padding-right: 0;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    &__solution {
+      margin-top: 12px;
+    }
+
+    // ----- Hero -----
+    &__hero {
+      flex-direction: column;
+      align-items: stretch;
+      min-height: 0;
+      gap: 22px;
+      margin-bottom: 36px;
+    }
+
+    &__hero-content {
+      flex: none;
+      max-width: 100%;
+      padding-right: 0;
+    }
+
+    &__hero-logo {
+      font-size: clamp(42px, 13vw, 56px);
+      line-height: 0.9;
+    }
+
+    &__hero-subtitle {
+      margin-top: 8px;
+      font-size: clamp(17px, 5vw, 20px);
+    }
+
+    &__hero-text {
+      max-width: 100%;
+      margin-top: 14px;
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    &__hero-image {
+      // На мобильном показываем hero целиком: без фиксированного ratio и crop.
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      aspect-ratio: auto;
+      object-fit: contain;
+      object-position: center;
+    }
+
+    // ----- Два больших визуала -----
+    &__split {
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 36px;
+    }
+
+    &__split-item {
+      flex: none;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 185 / 248;
+      position: relative;
+
+      // И фото, и VideoPlayer всегда занимают один и тот же мобильный кадр.
+      > img,
+      > .video-player {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+
+      .video-player {
+        min-width: 0;
+        overflow: hidden;
+      }
+
+      .video-player__poster-image,
+      .video-player__video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+    // ----- Оттенки: горизонтальная лента вместо трёх огромных карточек -----
+    &__shades {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 36px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      overscroll-behavior-inline: contain;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      > * {
+        flex: 0 0 min(72vw, 290px);
+        scroll-snap-align: start;
+      }
+    }
+
+    &__shade-image {
+      width: 100%;
+      aspect-ratio: 4 / 7;
+      margin-bottom: 12px;
+    }
+
+    &__shade-name {
+      font-size: 15px;
+      line-height: 1.15;
+    }
+
+    &__shade-description {
+      margin-top: 4px;
+      font-size: 12px;
+      line-height: 1.25;
+    }
+
+    // ----- Красная SMM-сетка -----
+    &__gallery {
+      padding: 32px 0;
+      margin-bottom: 36px;
+    }
+
+    &__gallery-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      padding: 0 16px;
+    }
+
+    // ----- До / после -----
+    &__before-after {
+      margin-bottom: 36px;
+    }
+
+    &__before-after-image {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    &__before-after-badge {
+      bottom: 16px;
+      font-size: 12px;
+      line-height: 1;
+      letter-spacing: 0.5px;
+      padding: 8px 16px;
+
+      &--before {
+        left: 10%;
+        transform: none;
+      }
+
+      &--after {
+        right: 10%;
+        transform: none;
+      }
+    }
+
+    // ----- Упаковка -----
+    &__packaging {
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 36px;
+    }
+
+    &__packaging-image {
+      flex: none;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1080 / 885;
+      object-fit: cover;
+    }
+
+    // ----- Финал -----
+    &__outro {
+      padding: 64px 20px;
+      margin-bottom: 48px;
+    }
+
+    &__outro-logo {
+      font-size: clamp(42px, 14vw, 58px);
+      line-height: 1;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .project-info-krygina {
+    &__container {
+      margin-top: 22px;
+    }
+
+    &__hero {
+      gap: 18px;
+    }
+
+    &__hero-image {
+      // Сохраняем исходные пропорции hero и на самых узких экранах.
+      aspect-ratio: auto;
+      height: auto;
+      object-fit: contain;
+    }
+
+    &__split-item {
+      aspect-ratio: 185 / 248;
+    }
+
+    &__shades {
+      > * {
+        flex-basis: 76vw;
+      }
+    }
+
+    &__gallery-grid {
+      gap: 8px;
+      padding: 0 12px;
+    }
+
+    &__before-after-image {
+      aspect-ratio: 1 / 1;
+    }
+
+    &__before-after-badge {
+      bottom: 12px;
+      font-size: 11px;
+      padding: 7px 13px;
+
+      &--before {
+        left: 8%;
+      }
+
+      &--after {
+        right: 8%;
+      }
+    }
+
+    &__outro {
+      padding: 52px 16px;
+    }
+  }
+}

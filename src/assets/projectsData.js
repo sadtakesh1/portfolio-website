@@ -8,53 +8,61 @@ const projectsData = [
   },
   {
     id: 2,
+    gif: require("../assets/images/krygina-preview.jpg"),
+    title: "KRYGINA COSMETICS",
+    description: "Упаковка, графика, SMM, карточки товара",
+    link: "Krygina",
+  },
+  {
+    id: 3,
     gif: require("../assets/images/muithom/2.jpg"),
     title: "MuiThom",
     description: "Брендинг, графика, этикетка, SMM",
     link: "MuiThom",
   },
   {
-    id: 3,
+    id: 4,
     gif: require("../assets/images/tonyco-preview.gif"),
     title: "TONyCO STORE",
     description: "Брендинг, упаковка, графика",
     link: "TonycoStore",
   },
   {
-    id: 4,
+    id: 5,
     gif: require("../assets/images/lenta-preview.gif"),
     title: "лента",
     description: "SMM, анимация",
     link: "Lenta",
   },
   {
-    id: 5,
+    id: 6,
     gif: require("../assets/images/yo-preview.png"),
     title: "йо!",
     description: "Упаковка, иллюстрация",
     link: "Yo",
   },
   {
-    id: 6,
+    id: 7,
     gif: require("../assets/images/ozon-preview.gif"),
     title: "ozoN",
     description: "3D, иллюстрация, анимация",
     link: "Ozon",
   },
   {
-    id: 7,
+    id: 8,
     gif: require("../assets/images/yasno-preview.png"),
     title: "ЯСНО",
     description: "Иллюстрация",
     link: "Yasno",
   },
   {
-    id: 8,
+    id: 9,
     gif: require("../assets/images/pk-preview.png"),
     title: "pravilNaya kosmetika",
     description: "Брендинг, иллюстрация, упаковка, SMM",
     link: "PravilnayaKosmetika",
   },
+  
 ];
 
 export default projectsData;
